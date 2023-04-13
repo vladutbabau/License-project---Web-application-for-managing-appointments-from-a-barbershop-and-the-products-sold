@@ -1,0 +1,430 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins';
+}
+
+.banner{
+    background: linear-gradient(rgba(0,123,123,0.66), #fd5353), url(imagini/imagineBG.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    width:190px;
+    position:absolute;
+    top:1%;
+    left:1%;
+}
+.banner-text{
+    text-align: center;
+    color: #Fff;
+    padding-top:190px;
+}
+.banner-text h1{
+    font-size:100px;
+    font-family: 'Kaushan Script', cursive;
+}
+.banner-text p{
+    font-size:20px;
+    font-style: italic;
+}
+
+.butoane-banner{
+    margin:70px auto 0;
+}
+
+.butoane-banner a{
+    width:150px;
+    text-decoration:none;
+    display: inline-block;
+    margin: 0 10px;
+    padding:12px 0;
+    color:#fff;
+    border: .5px solid #fff;
+    position:relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.butoane-banner a span{
+    width:0%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:#fff;
+    z-index:-1;
+    transition:0.5s;
+}
+.butoane-banner a:hover span{
+    width:100%;
+}
+.butoane-banner a:hover{
+    color:black;
+}
+.meniu{
+    width: 250px;
+    height:100vh;
+    position:fixed;
+    right:0;
+    top: 0;
+    background:rgba(0,123,123,0.9);
+    z-index:2;
+    display: block;
+    transition: 0.5s;
+}
+
+.inchis{
+    position: fixed;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.buton-meniu{
+    height: 50px;
+    width:50px;
+    position: fixed;
+    border-radius: 5px;
+    right: 20px;
+    top:10px;
+    z-index: 3;
+    cursor: pointer;
+}
+.buton-meniu span{
+    height: 3px;
+    width: 35px;
+    display: block;
+    background: #000;
+    position: absolute;
+    background: #fff;
+    left: 18px;
+}
+.buton-meniu:hover{
+    cursor: pointer;
+}
+.buton-meniu span:first-child{
+    top:35px;
+}
+.buton-meniu span:nth-child(2){
+    top:45px;
+}
+.buton-meniu span:nth-child(3){
+    top:55px;
+}
+.buton-meniu.deschis span:first-child{
+    transform: rotate(45deg);
+    top:43px;
+    left:17px;
+}
+.buton-meniu.deschis span:nth-child(2){
+   width: 0%;
+   opacity: 0;
+}
+.buton-meniu.deschis span:nth-child(3){
+    transform: rotate(-45deg);
+    top:45px;
+    left:16px;
+}
+@media screen and (max-width:770px){
+    .banner-text h1{
+        font-size:44px;
+    }
+    .butoane-banner a{
+    display: block;
+    margin:20px auto;
+}
+
+}
+
+/*
+@@@@@@@@@@@@@ DESPRE NOI @@@@@@@@@@@@
+*/
+#despre{
+    width: 100%;
+    padding:70px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.text-titlu{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.text-titlu p{
+    margin: auto;
+    font-size: 20px;
+    color: rgba(0,123,123,0.9);
+    font-weight:bold;
+    position:relative;
+    z-index:1;
+    display: inline-block;
+}
+.text-titlu p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#fd5353, #fff);
+    position:absolute;
+    top:-20px;
+    left:0;
+    z-index:-1;
+    transform: rotate(10deg);
+    border-top-left-radius:35px;
+    border-bottom-right-radius:35px;
+
+}
+.text-titlu h1{
+    font-size: 30px;
+}
+.despre-continut{
+    width: 80%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.despre{
+    flex-basis: 50%;
+}
+.despre-imagine{
+    flex-basis: 50%;
+    margin:auto;
+}
+.despre-imagine img{
+    width:60%;
+    border-radius:10px;
+}
+.despre h1{
+    text-align:left;
+    margin-bottom:10px;
+    font-weight:100;
+    color: #fd5353;
+}
+.despre-descriere{
+    display:flex;
+    align-items: center;
+    margin-bottom:40px;
+}
+.despre-text{
+    padding:0 20px;
+    text-align:initial;
+}
+.despre-icon i{
+    width:40px;
+    height:40px;
+    font-size:30px;
+    line-height: 38px;
+    border-radius:8px;
+    color:#fd5353;
+    border: 1px solid #fd5353;
+}
+.dspre-text p{
+    padding: 0 20px;
+    text-align:initial;
+}
+
+@media screen and (max-width:770px){
+    .text-titlu h1{
+        font-size:25px;
+    }
+    .despre{
+        flex-basis: 100%;
+    }
+    .despre-imagine{
+        flex-basis: 100%;
+    }
+    .despre-imagine img{
+        width: 100%;
+    }
+}
+
+/*  @@@@@@ SERVICII @@@@@@@@@*/
+
+#servicii{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+.servicii-casuta{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.poza-serviciu{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom:20px;
+    color: #Fff;
+    position: relative;
+}
+.poza-serviciu img{
+    width: 100%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.2), #fd5353);
+    opacity: 0;
+    transition: 1s;
+}
+.poza-serviciu:hover .overlay{
+    opacity:1;
+}
+.descriere-serviciu{
+    width: 80%;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    opacity:0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.descriere-serviciu p{
+    font-size: 14px;
+}
+.poza-serviciu:hover .descriere-serviciu{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width:770px){
+    .poza-serviciu{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .descriere-serviciu p{
+        font-size:12px;
+    }
+    hr{
+        margin:5px auto;
+    }
+    .poza-serviciu:hover .descriere-serviciu{
+        bottom: 25% !important;
+        
+    }
+
+}
+
+/*       @@@@@@@@ PROGRAMARE @@@@@@@@@@@     */
+
+#programare{
+    width: 100%;
+    padding:70px 0;
+    background-color: rgba(85, 76, 76, 0.8);
+}
+
+
+/*       @@@@@@@@ CONTACT @@@@@@@@@@@     */
+
+
+#contact{
+    padding: 100px 0 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.contact-coloane{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.partea-stanga, .partea-dreapta{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.partea-dreapta{
+    text-align: right;
+}
+.partea-stanga h1, .partea-dreapta h1{
+    font-size: 20px;
+    text-decoration: underline;
+}
+.contact-coloane h1{
+    margin: 10px 0;
+}
+.contact-coloane p{
+    line-height: 35px;
+}
+.partea-dreapta i, .partea-stanga i{
+    font-size: 20px;
+    color:rgba(0,123,123,0.9);
+    margin: 10px;
+}
+.poza-contact{
+    max-width: 200px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform:translate(-50%, -50%);
+}
+.social{
+    text-align: center;
+}
+.social i{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid rgba(0,123,123,0.9);
+    margin: 40px 5px 0;
+    color: rgba(0,123,123,0.9);
+    cursor:pointer;
+    transition: .5s;;
+}
+.social i:hover{
+    background: rgba(0,123,123,0.9);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.social p{
+    font-size: 8px;
+    margin-top: 20px;
+
+}
+.social p i{
+    border: none;
+    margin: 0;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+
+}
+
+@media screen and (max-width:770px){
+
+    .partea-dreapta, .partea-stanga{
+        flex-basis: 100%;
+        font-size:13px;
+    }
+    .poza-contact{
+        top: 25%;
+    }
+}
